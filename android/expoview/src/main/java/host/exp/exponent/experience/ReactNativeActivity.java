@@ -509,7 +509,7 @@ public abstract class ReactNativeActivity extends FragmentActivity implements co
         eventProperties.put(Analytics.USER_ERROR_MESSAGE, errorMessage.userErrorMessage());
         eventProperties.put(Analytics.DEVELOPER_ERROR_MESSAGE, errorMessage.developerErrorMessage());
         eventProperties.put(Analytics.MANIFEST_URL, mManifestUrl);
-        Amplitude.getInstance().logEvent(Analytics.ERROR_RELOADED, eventProperties);
+        // Amplitude.getInstance().logEvent(Analytics.ERROR_RELOADED, eventProperties);
       } catch (Exception e) {
         EXL.e(TAG, e.getMessage());
       }

@@ -757,7 +757,7 @@ public class ExperienceActivity extends BaseExperienceActivity implements Expone
         );
         kernelReactInstanceManager.onHostResume(ExperienceActivity.this, ExperienceActivity.this);
         addView(mNuxOverlayView);
-        Amplitude.getInstance().logEvent("NUX_EXPERIENCE_OVERLAY_SHOWN");
+        // Amplitude.getInstance().logEvent("NUX_EXPERIENCE_OVERLAY_SHOWN");
       }
     });
   }
@@ -795,7 +795,7 @@ public class ExperienceActivity extends BaseExperienceActivity implements Expone
               } catch (JSONException e) {
                 EXL.e(TAG, e.getMessage());
               }
-              Amplitude.getInstance().logEvent("NUX_EXPERIENCE_OVERLAY_DISMISSED", eventProperties);
+              // Amplitude.getInstance().logEvent("NUX_EXPERIENCE_OVERLAY_DISMISSED", eventProperties);
             }
 
             public void onAnimationRepeat(Animation animation) {

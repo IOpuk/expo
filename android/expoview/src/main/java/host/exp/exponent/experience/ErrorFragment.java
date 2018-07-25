@@ -80,7 +80,7 @@ public class ErrorFragment extends Fragment {
       eventProperties.put(Analytics.USER_ERROR_MESSAGE, userErrorMessage);
       eventProperties.put(Analytics.DEVELOPER_ERROR_MESSAGE, developerErrorMessage);
       eventProperties.put(Analytics.MANIFEST_URL, manifestUrl);
-      Amplitude.getInstance().logEvent(Analytics.ERROR_SCREEN, eventProperties);
+      // Amplitude.getInstance().logEvent(Analytics.ERROR_SCREEN, eventProperties);
     } catch (Exception e) {
       EXL.e(TAG, e.getMessage());
     }

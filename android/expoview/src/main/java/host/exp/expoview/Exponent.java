@@ -171,16 +171,16 @@ public class Exponent {
 
 
     // Amplitude
-    Analytics.resetAmplitudeDatabaseHelper();
+    // Analytics.resetAmplitudeDatabaseHelper();
 
     try {
-      Amplitude.getInstance().initialize(context, ExpoViewBuildConfig.DEBUG ? ExponentKeys.AMPLITUDE_DEV_KEY : ExponentKeys.AMPLITUDE_KEY);
+      // Amplitude.getInstance().initialize(context, ExpoViewBuildConfig.DEBUG ? ExponentKeys.AMPLITUDE_DEV_KEY : ExponentKeys.AMPLITUDE_KEY);
     } catch (RuntimeException e) {
       EXL.testError(e);
     }
 
     if (application != null) {
-      Amplitude.getInstance().enableForegroundTracking(application);
+     // Amplitude.getInstance().enableForegroundTracking(application);
     }
     try {
       JSONObject amplitudeUserProperties = new JSONObject();
@@ -188,7 +188,7 @@ public class Exponent {
       amplitudeUserProperties.put("ABI_VERSIONS", Constants.ABI_VERSIONS);
       amplitudeUserProperties.put("TEMPORARY_ABI_VERSION", Constants.TEMPORARY_ABI_VERSION);
       amplitudeUserProperties.put("IS_DETACHED", Constants.isDetached());
-      Amplitude.getInstance().setUserProperties(amplitudeUserProperties);
+      // Amplitude.getInstance().setUserProperties(amplitudeUserProperties);
     } catch (JSONException e) {
       EXL.e(TAG, e);
     }
@@ -306,7 +306,7 @@ public class Exponent {
   public static void logException(Throwable throwable) {
     if (!ExpoViewBuildConfig.DEBUG) {
       try {
-        Crashlytics.logException(throwable);
+        // Crashlytics.logException(throwable);
       } catch (Throwable e) {
         Log.e(TAG, e.toString());
       }
