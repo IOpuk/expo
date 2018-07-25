@@ -85,18 +85,18 @@ public abstract class ExpoApplication extends MultiDexApplication {
         }
       };
 
-      final CrashlyticsCore core = new CrashlyticsCore
-          .Builder()
-          .listener(listener)
-          .build();
+      // final CrashlyticsCore core = new CrashlyticsCore
+      //     .Builder()
+       //    .listener(listener)
+        //   .build();
 
-      Fabric.with(this, new Crashlytics.Builder().core(core).build());
+      // Fabric.with(this, new Crashlytics.Builder().core(core).build());
 
       try {
         String versionName = Constants.getVersionName(this);
-        Crashlytics.setString("exp_client_version", versionName);
+      //   Crashlytics.setString("exp_client_version", versionName);
         if (Constants.INITIAL_URL != null) {
-          Crashlytics.setString("initial_url", Constants.INITIAL_URL);
+        //   Crashlytics.setString("initial_url", Constants.INITIAL_URL);
         }
       } catch (Throwable e) {
         EXL.e(TAG, e.toString());
