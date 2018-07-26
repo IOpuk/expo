@@ -261,7 +261,7 @@ public class ExponentHttpClient {
     try {
       JSONObject eventProperties = new JSONObject();
       eventProperties.put("URI", uri);
-      Amplitude.getInstance().logEvent(event, eventProperties);
+//      Amplitude.getInstance().logEvent(event, eventProperties);
     } catch (JSONException e) {
       EXL.e(TAG, e);
     }

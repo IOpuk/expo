@@ -106,7 +106,7 @@ public class ErrorActivity extends MultipleVersionReactNativeActivity {
       eventProperties.put(Analytics.USER_ERROR_MESSAGE, mUserErrorMessage);
       eventProperties.put(Analytics.DEVELOPER_ERROR_MESSAGE, mDeveloperErrorMessage);
       eventProperties.put(Analytics.MANIFEST_URL, mManifestUrl);
-      Amplitude.getInstance().logEvent(Analytics.ERROR_SCREEN, eventProperties);
+//      Amplitude.getInstance().logEvent(Analytics.ERROR_SCREEN, eventProperties);
     } catch (Exception e) {
       EXL.e(TAG, e.getMessage());
     }

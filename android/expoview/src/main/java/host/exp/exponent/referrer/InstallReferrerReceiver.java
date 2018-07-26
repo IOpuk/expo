@@ -57,7 +57,7 @@ public class InstallReferrerReceiver extends CampaignTrackingReceiver {
     } catch (JSONException e) {
       EXL.e(TAG, e.getMessage());
     }
-    Amplitude.getInstance().logEvent("INSTALL_REFERRER_RECEIVED", eventProperties);
+//    Amplitude.getInstance().logEvent("INSTALL_REFERRER_RECEIVED", eventProperties);
 
     // Preload manifest + bundle if possible
     try {

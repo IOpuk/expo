@@ -63,7 +63,7 @@ public class HomeActivity extends BaseExperienceActivity {
 
     SoLoader.init(this, false);
 
-    Amplitude.getInstance().logEvent("HOME_APPEARED");
+//    Amplitude.getInstance().logEvent("HOME_APPEARED");
 
     registerForNotifications();
   }

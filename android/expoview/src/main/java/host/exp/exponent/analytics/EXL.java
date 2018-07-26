@@ -41,7 +41,7 @@ public class EXL {
       eventProperties.put("TAG", tag);
       eventProperties.put("MESSAGE", msg);
       eventProperties.put("STACK_TRACE", stackTrace);
-      Amplitude.getInstance().logEvent("LOG_ERROR", eventProperties);
+//      Amplitude.getInstance().logEvent("LOG_ERROR", eventProperties);
     } catch (Throwable e) {
       Log.e(TAG, e.toString());
     }
