@@ -395,7 +395,7 @@ public class ExponentManifest {
     if (exponentServerHeader != null) {
       try {
         JSONObject eventProperties = new JSONObject(exponentServerHeader);
-        Amplitude.getInstance().logEvent(Analytics.LOAD_DEVELOPER_MANIFEST, eventProperties);
+//        Amplitude.getInstance().logEvent(Analytics.LOAD_DEVELOPER_MANIFEST, eventProperties);
       } catch (Throwable e) {
         EXL.e(TAG, e);
       }

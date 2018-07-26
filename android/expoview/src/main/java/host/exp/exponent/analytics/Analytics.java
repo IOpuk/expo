@@ -68,7 +68,7 @@ public class Analytics {
       if (sdkVersion != null) {
         eventProperties.put(SDK_VERSION, sdkVersion);
       }
-      Amplitude.getInstance().logEvent(eventType, eventProperties);
+//      Amplitude.getInstance().logEvent(eventType, eventProperties);
     } catch (Exception e) {
       EXL.e(TAG, e.getMessage());
     }
@@ -102,7 +102,7 @@ public class Analytics {
       eventProperties.put("MANIFEST_URL", manifestUrl);
 
       boolean isShell = manifestUrl.equals(Constants.INITIAL_URL);
-      Amplitude.getInstance().logEvent(isShell ? "SHELL_EXPERIENCE_LOADED" : "EXPERIENCE_LOADED", eventProperties);
+//      Amplitude.getInstance().logEvent(isShell ? "SHELL_EXPERIENCE_LOADED" : "EXPERIENCE_LOADED", eventProperties);
     } catch (Exception e) {
       EXL.e(TAG, e.getMessage());
     } finally {
